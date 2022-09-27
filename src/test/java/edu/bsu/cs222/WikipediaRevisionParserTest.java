@@ -12,7 +12,7 @@ public class WikipediaRevisionParserTest {
     public void testParse() throws IOException {
         WikipediaRevisionParser parser = new WikipediaRevisionParser();
         InputStream testDataStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("Test.json");
-        String timeStamp = parser.parse(testDataStream);
+        String timeStamp = parser.parseTimestamp(testDataStream);
         Assertions.assertEquals("2022-01-09T00:39:38Z", timeStamp);
     }
 }
